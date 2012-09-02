@@ -38,6 +38,13 @@
     [self reconfigureControllerView];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    IGRCAppDelegate *delegate = (IGRCAppDelegate *) [[UIApplication sharedApplication] delegate];
+    [delegate.segueStrategy prepareForSegue:segue parameter:sender];
+}
+
+
+
 - (IBAction)switchFavoriteState {
     _receipt.favorite = [NSNumber numberWithBool:![_receipt.favorite boolValue]];
     IGRCAppDelegate *delegate = (IGRCAppDelegate *)[[UIApplication sharedApplication] delegate];

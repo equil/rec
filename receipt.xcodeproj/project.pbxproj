@@ -30,7 +30,6 @@
 		65565C0023474D65D60A80EC /* IGRCReceiptDetailsSeguePreparer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565900ACBA1C2E2D9E4598 /* IGRCReceiptDetailsSeguePreparer.m */; };
 		65565C7B90ED6E0F41F3B1E9 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65565AA70530F50BDEE252BD /* second@2x.png */; };
 		65565CD977E4CA22ED37DADE /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 655657FBDD8F653399B88189 /* Category.m */; };
-		65565F5505A635BB033F81C5 /* IGRCIngredientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 655655CE3040CD3A070BC52C /* IGRCIngredientCell.xib */; };
 		65565FBC36FD55C964215504 /* IGRCDataAccessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 655655977547E00F36514943 /* IGRCDataAccessManager.m */; };
 		65565FED650168EC274B8DAC /* IGRCIngredientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565C656B488705C81128E2 /* IGRCIngredientCell.m */; };
 		6B39552B15F2A7500045F35A /* receipt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B39552915F2A7500045F35A /* receipt.xcdatamodeld */; };
@@ -67,7 +66,6 @@
 		655655743B0EEAB0FEB6231D /* IGRCFromCategoryToReceiptSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGRCFromCategoryToReceiptSegue.m; sourceTree = "<group>"; };
 		655655977547E00F36514943 /* IGRCDataAccessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGRCDataAccessManager.m; sourceTree = "<group>"; };
 		655655C1B67F5B26EFFC3EE5 /* IGRCFavoritesBadgeObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGRCFavoritesBadgeObserver.m; sourceTree = "<group>"; };
-		655655CE3040CD3A070BC52C /* IGRCIngredientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IGRCIngredientCell.xib; sourceTree = "<group>"; };
 		6556561C0DB3E05C96AF752B /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		655656513E90C7CCE31AB2E8 /* IGRCFavoriteReceiptsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCFavoriteReceiptsTableViewController.h; sourceTree = "<group>"; };
 		655656EEACBA47986CE60B0C /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
@@ -197,7 +195,6 @@
 				6556525441A0F1F3A4A78E6C /* IGRCReceiptCell.h */,
 				655657BDEB2E76F0FB808DDF /* IGRCIngredientsTableViewController.h */,
 				65565497108C9715B18EAFE8 /* IGRCIngredientsTableViewController.m */,
-				655655CE3040CD3A070BC52C /* IGRCIngredientCell.xib */,
 				65565C656B488705C81128E2 /* IGRCIngredientCell.m */,
 				65565E341127D2B1D15F3C61 /* IGRCIngredientCell.h */,
 				6556549750F89FB7CD3FD1A0 /* IGRCFavoriteReceiptsTableViewController.m */,
@@ -333,7 +330,6 @@
 				655651C2C86004E22BF29DAF /* second.png in Resources */,
 				65565C7B90ED6E0F41F3B1E9 /* second@2x.png in Resources */,
 				65565560DD69D47619BDE944 /* test.png in Resources */,
-				65565F5505A635BB033F81C5 /* IGRCIngredientCell.xib in Resources */,
 				1E4C8E3315F37071005E49B8 /* db.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

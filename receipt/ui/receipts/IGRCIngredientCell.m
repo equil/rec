@@ -17,7 +17,7 @@
 
 - (void)configureCellWithIngredient:(Ingredient *)ingredient {
     _nameLabel.text = ingredient.product.title;
-    _weightLabel.text = [NSString stringWithFormat:@"%i", [ingredient.weight intValue]];
+    _weightLabel.text = [NSString stringWithFormat:@"%i гр.", [ingredient.weight intValue]];
 }
 
 - (void)dealloc {

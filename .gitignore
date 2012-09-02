@@ -42,3 +42,4 @@ receipt.xcodeproj/project.xcworkspace
 receipt.xcodeproj/xcuserdata
 
 build
+Gemfile.lock
