@@ -68,8 +68,8 @@
 //        NSError *error;
 //        [_context save:&error];
         
-        NSArray *arrI = [self getArrayOfIngredients];
-        NSLog(@"arrI %d", [arrI count]);
+//        NSArray *arrI = [self getArrayOfIngredients];
+//        NSLog(@"arrI %d", [arrI count]);
 //        for (Ingredient *i in arrI) {
 //            NSLog(@"%@", i.receipt.title);
 ////            if (j > 6)

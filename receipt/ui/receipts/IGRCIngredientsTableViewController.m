@@ -17,7 +17,7 @@
 @implementation IGRCIngredientsTableViewController
 {
 @private
-    Category *_fromCategory;
+    Receipt *_fromReceipt;
     NSFetchedResultsController *_fetchedResultsController;
 }
 
@@ -34,7 +34,19 @@
     return _fromReceipt;
 }
 
+- (void)setFromReceipt:(Receipt *)afromReceipt {
+    self.fetchedResultsController = nil;
+    [_fromReceipt release];
+    _fromReceipt = [afromReceipt retain];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    IGRCAppDelegate *delegate = (IGRCAppDelegate *) [[UIApplication sharedApplication] delegate];
+    [delegate.segueStrategy prepareForSegue:segue parameter:sender];
+}
+
 - (NSPredicate *)predicateForFetchedController {
+    NSLog(@"%@", self.fromReceipt.title);
     return [NSPredicate predicateWithFormat:@"receipt == %@", self.fromReceipt];
 }
 
@@ -159,8 +171,6 @@
     
     Ingredient *ingredient = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    NSLog(@"%@", ingredient);
-    
     [cell configureCellWithIngredient:ingredient];
     
     return cell;
@@ -181,6 +191,7 @@
 
 - (void)dealloc {
     self.fetchedResultsController = nil;
+    [_fromReceipt release];
     [_fetchedResultsController release];
     [super dealloc];
 }
