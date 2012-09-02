@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1E4C8E3115F32CE2005E49B8 /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C8E3015F32CE2005E49B8 /* Ingredient.m */; };
+		1E4C8E3315F37071005E49B8 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1E4C8E3215F37071005E49B8 /* db.sqlite */; };
 		655651C2C86004E22BF29DAF /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 655656EEACBA47986CE60B0C /* second.png */; };
-		6556525FDDEC0C88722782BD /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 65565B23856D99ADD34AB4AE /* db.sqlite */; };
 		655652AE6788BAB22C7515A4 /* IGRCFromCategoryToReceiptSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 655655743B0EEAB0FEB6231D /* IGRCFromCategoryToReceiptSegue.m */; };
 		6556536AD50057F13318DB27 /* IGRCIngredientsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565497108C9715B18EAFE8 /* IGRCIngredientsTableViewController.m */; };
 		6556541AB643E31AFF813CD9 /* IGRCReceiptsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556586D709CB9E1884EB869 /* IGRCReceiptsTableViewController.m */; };
@@ -46,6 +46,7 @@
 /* Begin PBXFileReference section */
 		1E4C8E2F15F32CE2005E49B8 /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredient.h; sourceTree = "<group>"; };
 		1E4C8E3015F32CE2005E49B8 /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredient.m; sourceTree = "<group>"; };
+		1E4C8E3215F37071005E49B8 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
 		65565008275438E8AE92B0EF /* Good.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Good.m; sourceTree = "<group>"; };
 		655650686C91757AFB7413B2 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		655650F4CB826A5155369173 /* IGRCDataAccessManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCDataAccessManager.h; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		65565A80F78E252EAA0B0D73 /* Good.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Good.h; sourceTree = "<group>"; };
 		65565A9083775279257D3BE1 /* IGRCSeguePrepareStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCSeguePrepareStrategy.h; sourceTree = "<group>"; };
 		65565AA70530F50BDEE252BD /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		65565B23856D99ADD34AB4AE /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file.sqlite; path = db.sqlite; sourceTree = "<group>"; };
 		65565C5E4C1B912A4148067E /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		65565C656B488705C81128E2 /* IGRCIngredientCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGRCIngredientCell.m; sourceTree = "<group>"; };
 		65565D44A9588A05B63EA178 /* IGRCCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCCategoryTableViewController.h; sourceTree = "<group>"; };
@@ -132,12 +132,12 @@
 		655653B343A8D208F902E456 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				1E4C8E3215F37071005E49B8 /* db.sqlite */,
 				65565C5E4C1B912A4148067E /* test.png */,
 				65565AA70530F50BDEE252BD /* second@2x.png */,
 				655656EEACBA47986CE60B0C /* second.png */,
 				655650686C91757AFB7413B2 /* first@2x.png */,
 				6556561C0DB3E05C96AF752B /* first.png */,
-				65565B23856D99ADD34AB4AE /* db.sqlite */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -190,8 +190,8 @@
 				655656F91C5734B00652C66B /* IGRCReceiptDetailsViewController.h */,
 				6556510C5A64B8A9EE829CC2 /* IGRCReceiptCell.m */,
 				6556525441A0F1F3A4A78E6C /* IGRCReceiptCell.h */,
-				65565497108C9715B18EAFE8 /* IGRCIngredientsTableViewController.m */,
 				655657BDEB2E76F0FB808DDF /* IGRCIngredientsTableViewController.h */,
+				65565497108C9715B18EAFE8 /* IGRCIngredientsTableViewController.m */,
 				655655CE3040CD3A070BC52C /* IGRCIngredientCell.xib */,
 				65565C656B488705C81128E2 /* IGRCIngredientCell.m */,
 				65565E341127D2B1D15F3C61 /* IGRCIngredientCell.h */,
@@ -323,13 +323,13 @@
 			files = (
 				6B3C4FD415F292E100FF10D1 /* InfoPlist.strings in Resources */,
 				6B3C4FDD15F292E100FF10D1 /* MainStoryboard.storyboard in Resources */,
-				6556525FDDEC0C88722782BD /* db.sqlite in Resources */,
 				65565ADAE16729E5590815E5 /* first.png in Resources */,
 				655655E5CB6492C274D7EAA8 /* first@2x.png in Resources */,
 				655651C2C86004E22BF29DAF /* second.png in Resources */,
 				65565C7B90ED6E0F41F3B1E9 /* second@2x.png in Resources */,
 				65565560DD69D47619BDE944 /* test.png in Resources */,
 				65565F5505A635BB033F81C5 /* IGRCIngredientCell.xib in Resources */,
+				1E4C8E3315F37071005E49B8 /* db.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

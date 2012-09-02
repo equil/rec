@@ -201,6 +201,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="hGU-Vd-WWl" kind="push" id="PrU-Wc-xXY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tpE-XS-Zhy">
                                         <rect key="frame" x="253" y="278" width="32" height="32"/>
@@ -400,6 +403,25 @@
             </objects>
             <point key="canvasLocation" x="299" y="-650"/>
         </scene>
+        <!--Ingredients Table View Controller-->
+        <scene sceneID="rmY-0B-7hV">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0y-te-XOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="hGU-Vd-WWl" customClass="IGRCIngredientsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Kus-ME-kzB">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="hGU-Vd-WWl" id="sUA-cW-EFb"/>
+                            <outlet property="delegate" destination="hGU-Vd-WWl" id="j6O-SU-yG0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="3e4-Pc-WQc"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1870" y="-655"/>
+        </scene>
     </scenes>
     <resources>
         <image name="first.png" width="30" height="30"/>
@@ -418,6 +440,9 @@
         </class>
         <class className="IGRCFavoriteReceiptsTableViewController" superclassName="IGRCReceiptsTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IGRCFavoriteReceiptsTableViewController.h"/>
+        </class>
+        <class className="IGRCIngredientsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGRCIngredientsTableViewController.h"/>
         </class>
         <class className="IGRCReceiptCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IGRCReceiptCell.h"/>
@@ -447,6 +472,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pZf-eA-2HJ"/>
+        <segue reference="jn1-cb-tqf"/>
     </inferredMetricsTieBreakers>
 </document>

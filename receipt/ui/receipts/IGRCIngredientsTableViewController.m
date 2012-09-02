@@ -58,7 +58,7 @@
         
         [fetch setPredicate:[self predicateForFetchedController]];
         
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"product.title" ascending:YES];
         [fetch setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
         [sortDescriptor release];
         
@@ -66,12 +66,12 @@
                                      initWithFetchRequest:fetch
                                      managedObjectContext:context
                                      sectionNameKeyPath:nil cacheName:nil];
+        
         _fetchedResultsController.delegate = self;
         [fetch release];
     }
     
-    return _fetchedResultsController;
-    
+    return _fetchedResultsController;    
 }
 
 
@@ -147,6 +147,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:(NSUInteger) section];
+    
+    NSLog(@"items count: %d", [sectionInfo numberOfObjects]);
+    
     return [sectionInfo numberOfObjects];
 }
 
@@ -155,6 +158,9 @@
     IGRCIngredientCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     Ingredient *ingredient = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    NSLog(@"%@", ingredient);
+    
     [cell configureCellWithIngredient:ingredient];
     
     return cell;
