@@ -10,6 +10,8 @@
 		1E4C8E3115F32CE2005E49B8 /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C8E3015F32CE2005E49B8 /* Ingredient.m */; };
 		1E4C8E3315F37071005E49B8 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1E4C8E3215F37071005E49B8 /* db.sqlite */; };
 		1E4C8E3615F3C179005E49B8 /* IGRCFromReceiptToIngredientSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C8E3515F3C179005E49B8 /* IGRCFromReceiptToIngredientSegue.m */; };
+		1E4C8E3D15F48FDA005E49B8 /* IGRCStoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C8E3C15F48FDA005E49B8 /* IGRCStoreTableViewController.m */; };
+		1E4C8E4115F49105005E49B8 /* IGRCGoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C8E4015F49104005E49B8 /* IGRCGoodCell.m */; };
 		655651C2C86004E22BF29DAF /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 655656EEACBA47986CE60B0C /* second.png */; };
 		655652AE6788BAB22C7515A4 /* IGRCFromCategoryToReceiptSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 655655743B0EEAB0FEB6231D /* IGRCFromCategoryToReceiptSegue.m */; };
 		6556536AD50057F13318DB27 /* IGRCIngredientsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565497108C9715B18EAFE8 /* IGRCIngredientsTableViewController.m */; };
@@ -49,6 +51,10 @@
 		1E4C8E3215F37071005E49B8 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
 		1E4C8E3415F3C179005E49B8 /* IGRCFromReceiptToIngredientSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCFromReceiptToIngredientSegue.h; sourceTree = "<group>"; };
 		1E4C8E3515F3C179005E49B8 /* IGRCFromReceiptToIngredientSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGRCFromReceiptToIngredientSegue.m; sourceTree = "<group>"; };
+		1E4C8E3B15F48FD9005E49B8 /* IGRCStoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCStoreTableViewController.h; sourceTree = "<group>"; };
+		1E4C8E3C15F48FDA005E49B8 /* IGRCStoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGRCStoreTableViewController.m; sourceTree = "<group>"; };
+		1E4C8E3F15F49103005E49B8 /* IGRCGoodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCGoodCell.h; sourceTree = "<group>"; };
+		1E4C8E4015F49104005E49B8 /* IGRCGoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGRCGoodCell.m; sourceTree = "<group>"; };
 		65565008275438E8AE92B0EF /* Good.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Good.m; sourceTree = "<group>"; };
 		655650686C91757AFB7413B2 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		655650F4CB826A5155369173 /* IGRCDataAccessManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCDataAccessManager.h; sourceTree = "<group>"; };
@@ -195,14 +201,18 @@
 				6556525441A0F1F3A4A78E6C /* IGRCReceiptCell.h */,
 				655657BDEB2E76F0FB808DDF /* IGRCIngredientsTableViewController.h */,
 				65565497108C9715B18EAFE8 /* IGRCIngredientsTableViewController.m */,
-				65565C656B488705C81128E2 /* IGRCIngredientCell.m */,
-				65565E341127D2B1D15F3C61 /* IGRCIngredientCell.h */,
 				6556549750F89FB7CD3FD1A0 /* IGRCFavoriteReceiptsTableViewController.m */,
 				655656513E90C7CCE31AB2E8 /* IGRCFavoriteReceiptsTableViewController.h */,
 				6556524DC4111D9FDF526C93 /* IGRCCategoryTableViewController.m */,
 				65565D44A9588A05B63EA178 /* IGRCCategoryTableViewController.h */,
+				1E4C8E3B15F48FD9005E49B8 /* IGRCStoreTableViewController.h */,
+				1E4C8E3C15F48FDA005E49B8 /* IGRCStoreTableViewController.m */,
 				65565E9C1F06A97C1208D3D5 /* IGRCCategoryCell.m */,
 				65565F0DB3954B9412BCD060 /* IGRCCategoryCell.h */,
+				65565C656B488705C81128E2 /* IGRCIngredientCell.m */,
+				65565E341127D2B1D15F3C61 /* IGRCIngredientCell.h */,
+				1E4C8E3F15F49103005E49B8 /* IGRCGoodCell.h */,
+				1E4C8E4015F49104005E49B8 /* IGRCGoodCell.m */,
 			);
 			path = receipts;
 			sourceTree = "<group>";
@@ -363,6 +373,8 @@
 				6B39552B15F2A7500045F35A /* receipt.xcdatamodeld in Sources */,
 				1E4C8E3115F32CE2005E49B8 /* Ingredient.m in Sources */,
 				1E4C8E3615F3C179005E49B8 /* IGRCFromReceiptToIngredientSegue.m in Sources */,
+				1E4C8E3D15F48FDA005E49B8 /* IGRCStoreTableViewController.m in Sources */,
+				1E4C8E4115F49105005E49B8 /* IGRCGoodCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

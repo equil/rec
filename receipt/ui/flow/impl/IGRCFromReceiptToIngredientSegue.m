@@ -18,7 +18,7 @@
                     parameter:(IGRCIngredientCell *)sender {
     Receipt *receipt = sourceController.receipt;
     destinationController.fromReceipt = receipt;
-    destinationController.navigationItem.title = receipt.title;
+    destinationController.navigationItem.title = @"Ингредиенты";
 }
 
 @end

@@ -46,7 +46,6 @@
 }
 
 - (NSPredicate *)predicateForFetchedController {
-    NSLog(@"%@", self.fromReceipt.title);
     return [NSPredicate predicateWithFormat:@"receipt == %@", self.fromReceipt];
 }
 
@@ -158,10 +157,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:(NSUInteger) section];
-    
-    NSLog(@"items count: %d", [sectionInfo numberOfObjects]);
-    
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:(NSUInteger) section];    
     return [sectionInfo numberOfObjects];
 }
 
@@ -171,7 +167,7 @@
     
     Ingredient *ingredient = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    [cell configureCellWithIngredient:ingredient];
+    [cell configureCellWithIngredient:ingredient andDelegate:self];
     
     return cell;
 }

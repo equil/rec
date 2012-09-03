@@ -10,11 +10,16 @@
 #import "Ingredient.h"
 
 @interface IGRCIngredientCell : UITableViewCell
+{
+    id tableDelegate;
+}
 
+@property(nonatomic, retain) Product *product;
 @property(nonatomic, retain) IBOutlet UILabel *nameLabel;
 @property(nonatomic, retain) IBOutlet UILabel *weightLabel;
 @property(nonatomic, retain) IBOutlet UIButton *buyBtn;
 
-- (void) configureCellWithIngredient:(Ingredient *)ingredient;
+- (void) configureCellWithIngredient:(Ingredient *)ingredient andDelegate:(id)aDelegate;
+- (IBAction)buyItem;
 
 @end
