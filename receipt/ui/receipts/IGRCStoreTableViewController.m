@@ -22,6 +22,8 @@
     NSFetchedResultsController *_fetchResultsController;
 }
 
+@synthesize addBarItem;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -46,6 +48,7 @@
 {
     [super viewDidUnload];
     self.fetchResultsController = nil;
+    self.addBarItem = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -164,6 +167,7 @@
 
 - (void)dealloc {
     [_fetchResultsController release];
+    [addBarItem release];
     [super dealloc];
 }
 

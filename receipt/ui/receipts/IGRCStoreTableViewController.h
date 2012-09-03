@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 @class NSFetchedResultsController;
 
 @interface IGRCStoreTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+
 @property(nonatomic, retain, readonly) NSFetchedResultsController *fetchResultsController;
+@property(nonatomic, retain) IBOutlet UIBarButtonItem *addBarItem;
+
 @end

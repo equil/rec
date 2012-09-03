@@ -12,6 +12,7 @@
 		1E4C8E3615F3C179005E49B8 /* IGRCFromReceiptToIngredientSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C8E3515F3C179005E49B8 /* IGRCFromReceiptToIngredientSegue.m */; };
 		1E4C8E3D15F48FDA005E49B8 /* IGRCStoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C8E3C15F48FDA005E49B8 /* IGRCStoreTableViewController.m */; };
 		1E4C8E4115F49105005E49B8 /* IGRCGoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4C8E4015F49104005E49B8 /* IGRCGoodCell.m */; };
+		1EDD3B8B15F4BC81006DAC5B /* IGRCAddGoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDD3B8A15F4BC81006DAC5B /* IGRCAddGoodViewController.m */; };
 		655651C2C86004E22BF29DAF /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 655656EEACBA47986CE60B0C /* second.png */; };
 		655652AE6788BAB22C7515A4 /* IGRCFromCategoryToReceiptSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 655655743B0EEAB0FEB6231D /* IGRCFromCategoryToReceiptSegue.m */; };
 		6556536AD50057F13318DB27 /* IGRCIngredientsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565497108C9715B18EAFE8 /* IGRCIngredientsTableViewController.m */; };
@@ -55,6 +56,8 @@
 		1E4C8E3C15F48FDA005E49B8 /* IGRCStoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGRCStoreTableViewController.m; sourceTree = "<group>"; };
 		1E4C8E3F15F49103005E49B8 /* IGRCGoodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCGoodCell.h; sourceTree = "<group>"; };
 		1E4C8E4015F49104005E49B8 /* IGRCGoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGRCGoodCell.m; sourceTree = "<group>"; };
+		1EDD3B8915F4BC81006DAC5B /* IGRCAddGoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCAddGoodViewController.h; sourceTree = "<group>"; };
+		1EDD3B8A15F4BC81006DAC5B /* IGRCAddGoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGRCAddGoodViewController.m; sourceTree = "<group>"; };
 		65565008275438E8AE92B0EF /* Good.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Good.m; sourceTree = "<group>"; };
 		655650686C91757AFB7413B2 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		655650F4CB826A5155369173 /* IGRCDataAccessManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCDataAccessManager.h; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 				65565E341127D2B1D15F3C61 /* IGRCIngredientCell.h */,
 				1E4C8E3F15F49103005E49B8 /* IGRCGoodCell.h */,
 				1E4C8E4015F49104005E49B8 /* IGRCGoodCell.m */,
+				1EDD3B8915F4BC81006DAC5B /* IGRCAddGoodViewController.h */,
+				1EDD3B8A15F4BC81006DAC5B /* IGRCAddGoodViewController.m */,
 			);
 			path = receipts;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 				1E4C8E3615F3C179005E49B8 /* IGRCFromReceiptToIngredientSegue.m in Sources */,
 				1E4C8E3D15F48FDA005E49B8 /* IGRCStoreTableViewController.m in Sources */,
 				1E4C8E4115F49105005E49B8 /* IGRCGoodCell.m in Sources */,
+				1EDD3B8B15F4BC81006DAC5B /* IGRCAddGoodViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

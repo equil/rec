@@ -316,7 +316,103 @@
             </objects>
             <point key="canvasLocation" x="-285" y="-655"/>
         </scene>
-        <!--Store Table View Controller-->
+        <!--Add Good View Controller - Добавление продукта-->
+        <scene sceneID="ihA-NE-Ydb">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQi-0g-whO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="1tu-4g-7qd" customClass="IGRCAddGoodViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UpM-sa-qtX">
+                        <rect key="frame" x="0.0" y="64" width="320" height="216"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Продукт" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" id="RNb-Rc-0TU">
+                                <rect key="frame" x="16" y="5" width="73" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Вес, гр" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" id="JlV-xv-FuP">
+                                <rect key="frame" x="16" y="68" width="57" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0GT-tX-fFF">
+                                <rect key="frame" x="228" y="152" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Отмена">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonClick" destination="1tu-4g-7qd" eventType="touchUpInside" id="Y45-Iv-df1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XSS-bK-zTV">
+                                <rect key="frame" x="135" y="152" width="85" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Добавить">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonClick" destination="1tu-4g-7qd" eventType="touchUpInside" id="bQp-zd-ewK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите название продукта" minimumFontSize="17" id="7gN-rs-0iV">
+                                <rect key="frame" x="16" y="29" width="288" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите значение в граммах" minimumFontSize="17" id="JXh-Gy-mCY">
+                                <rect key="frame" x="16" y="92" width="288" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <view alpha="0.0" contentMode="scaleToFill" id="lh8-FH-zst">
+                                <rect key="frame" x="0.0" y="126" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Одно из полей не заполнено!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QsC-Qc-gOB">
+                                        <rect key="frame" x="16" y="0.0" width="287" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Добавление продукта" id="B9f-9f-hvu"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="addButton" destination="XSS-bK-zTV" id="hHu-fV-fnO"/>
+                        <outlet property="cancelButton" destination="0GT-tX-fFF" id="CBk-X2-dCu"/>
+                        <outlet property="infoLabel" destination="QsC-Qc-gOB" id="kf9-16-wwK"/>
+                        <outlet property="infoView" destination="lh8-FH-zst" id="pcB-bF-pzo"/>
+                        <outlet property="nameField" destination="7gN-rs-0iV" id="w1j-aY-0m6"/>
+                        <outlet property="weightField" destination="JXh-Gy-mCY" id="EAu-XV-n0t"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="770" y="8"/>
+        </scene>
+        <!--Store Table View Controller - Магазин-->
         <scene sceneID="Oho-GL-sir">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTo-AX-0dn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -361,10 +457,19 @@
                             <outlet property="delegate" destination="Dix-1n-Raz" id="Ccd-Uc-9PD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1nK-VJ-xbD"/>
+                    <navigationItem key="navigationItem" title="Магазин" id="1nK-VJ-xbD">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="75v-0h-PZk">
+                            <connections>
+                                <segue destination="1tu-4g-7qd" kind="push" identifier="" customClass="IGRCAddGoodSegue" id="dlD-Gx-7e2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addBarItem" destination="75v-0h-PZk" id="fz9-jr-O1W"/>
+                    </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="279" y="25"/>
+            <point key="canvasLocation" x="313" y="8"/>
         </scene>
         <!--Favorite Receipts Table View Controller - Избранное-->
         <scene sceneID="hHG-jL-vRE">
@@ -495,6 +600,19 @@
         <image name="second.png" width="30" height="30"/>
     </resources>
     <classes>
+        <class className="IGRCAddGoodViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGRCAddGoodViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addButtonClick"/>
+                <relationship kind="action" name="cancelButtonClick"/>
+                <relationship kind="outlet" name="addButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cancelButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="infoLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="infoView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="weightField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
         <class className="IGRCCategoryCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IGRCCategoryCell.h"/>
             <relationships>
@@ -550,6 +668,9 @@
         </class>
         <class className="IGRCStoreTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IGRCStoreTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addBarItem" candidateClass="UIBarButtonItem"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
