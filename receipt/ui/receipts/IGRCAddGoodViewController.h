@@ -14,7 +14,6 @@
 @property (nonatomic, retain) IBOutlet UITextField *weightField;
 @property (nonatomic, retain) IBOutlet UIButton *addButton;
 @property (nonatomic, retain) IBOutlet UIButton *cancelButton;
-@property (nonatomic, retain) IBOutlet UIView *infoView;
 @property (nonatomic, retain) IBOutlet UILabel *infoLabel;
 
 - (IBAction)addButtonClick;

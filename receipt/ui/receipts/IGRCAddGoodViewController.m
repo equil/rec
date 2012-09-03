@@ -17,7 +17,7 @@
 
 @implementation IGRCAddGoodViewController
 
-@synthesize nameField, weightField, addButton, cancelButton, infoView, infoLabel;
+@synthesize nameField, weightField, addButton, cancelButton, infoLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,7 +40,6 @@
     self.weightField = nil;
     self.addButton = nil;
     self.cancelButton = nil;
-    self.infoView = nil;
     self.infoLabel = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -57,7 +56,6 @@
     [weightField release];
     [addButton release];
     [cancelButton release];
-    [infoView release];
     [infoLabel release];
     [super dealloc];
 }
@@ -66,7 +64,7 @@
 {
     if ([nameField.text isEqualToString:@""] || [weightField.text isEqualToString:@""])
     {
-        infoView.alpha = 1.0;
+        [infoLabel setAlpha:1.0];
         [self performSelector:@selector(hideInfoView) withObject:nil afterDelay:2.0];
     }
     else
@@ -106,7 +104,7 @@
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.5f];
     
-    infoView.alpha = 0.0;
+    [infoLabel setAlpha:0.0];
     
     [UIView commitAnimations];
 }

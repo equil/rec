@@ -381,20 +381,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <view alpha="0.0" contentMode="scaleToFill" id="lh8-FH-zst">
-                                <rect key="frame" x="0.0" y="126" width="320" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" text="Одно из полей не заполнено!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QsC-Qc-gOB">
+                                <rect key="frame" x="16" y="127" width="287" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Одно из полей не заполнено!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QsC-Qc-gOB">
-                                        <rect key="frame" x="16" y="0.0" width="287" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -404,7 +397,6 @@
                         <outlet property="addButton" destination="XSS-bK-zTV" id="hHu-fV-fnO"/>
                         <outlet property="cancelButton" destination="0GT-tX-fFF" id="CBk-X2-dCu"/>
                         <outlet property="infoLabel" destination="QsC-Qc-gOB" id="kf9-16-wwK"/>
-                        <outlet property="infoView" destination="lh8-FH-zst" id="pcB-bF-pzo"/>
                         <outlet property="nameField" destination="7gN-rs-0iV" id="w1j-aY-0m6"/>
                         <outlet property="weightField" destination="JXh-Gy-mCY" id="EAu-XV-n0t"/>
                     </connections>
