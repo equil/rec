@@ -11,6 +11,7 @@
 @interface IGRCAddGoodViewController : UIViewController <UITextFieldDelegate>
 {
     NSString *unit;
+    NSInteger selectedInSegmentedControl;
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *nameField;

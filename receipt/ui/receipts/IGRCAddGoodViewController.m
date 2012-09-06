@@ -35,6 +35,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange) name:UITextFieldTextDidChangeNotification object:nil];
     
     unit = @"гр";
+    selectedInSegmentedControl = 0;
 }
 
 - (void)viewDidUnload
@@ -48,7 +49,6 @@
     self.infoLabel = nil;
     self.selectUnitLabel = nil;
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -189,7 +189,7 @@
     }
     else
     {
-        unit = @"гр";
+        [self processSegment];
         [unitLabel setText:@""];
         [self unitSegmentedControlToTop];
     }
@@ -197,15 +197,19 @@
 
 - (IBAction)segmentSwitch:(id)sender {
     UISegmentedControl *segmentedControl = (UISegmentedControl *) sender;
-    NSInteger selectedSegment = segmentedControl.selectedSegmentIndex;
-    
-    switch (selectedSegment) {
+    selectedInSegmentedControl = segmentedControl.selectedSegmentIndex;
+    [self processSegment];
+}
+
+- (void)processSegment
+{
+    switch (selectedInSegmentedControl) {
         case 0:
         {
             unit = @"гр";
         }
             break;
-        
+            
         case 1:
         {
             unit = @"мл";
