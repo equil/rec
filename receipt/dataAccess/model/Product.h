@@ -2,8 +2,8 @@
 //  Product.h
 //  receipt
 //
-//  Created by Alexey Rogatkin on 16.08.12.
-//
+//  Created by fredformout on 06.09.12.
+//  Copyright (c) 2012 Alexey Rogatkin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,5 +13,6 @@
 @interface Product : NSManagedObject
 
 @property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString * unit;
 
 @end

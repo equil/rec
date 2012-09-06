@@ -15,6 +15,7 @@
     </entity>
     <entity name="Product" representedClassName="Product" syncable="YES">
         <attribute name="title" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="unit" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Receipt" representedClassName="Receipt" syncable="YES">
         <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
@@ -32,10 +33,10 @@
         </compoundIndexes>
     </entity>
     <elements>
-        <element name="Category" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Good" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Ingredient" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Product" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Receipt" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Category" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="Good" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="Ingredient" positionX="0" positionY="0" width="128" height="90"/>
+        <element name="Product" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="Receipt" positionX="0" positionY="0" width="128" height="165"/>
     </elements>
 </model>

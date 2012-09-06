@@ -18,11 +18,10 @@
     tableDelegate = aDelegate;
     _product = good.product;
     _nameLabel.text = good.product.title;
-    _weightLabel.text = [NSString stringWithFormat:@"%i гр.", [good.weight intValue]];
+    _weightLabel.text = [NSString stringWithFormat:@"%i %@.", [good.weight intValue], _product.unit];
 }
 
 - (void)dealloc {
-    [_product release];
     [_nameLabel release];
     [_weightLabel release];
     [super dealloc];

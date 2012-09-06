@@ -32,8 +32,7 @@
 }
 
 - (void)setReceipt:(Receipt *)aReceipt {
-    [_receipt release];
-    _receipt = [aReceipt retain];
+    _receipt = aReceipt;
 
     [self reconfigureControllerView];
 }
@@ -119,6 +118,12 @@
     // Release any retained subviews of the main view.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self reconfigureControllerView];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -128,7 +133,6 @@
     [_receiptImage release];
     [_descriptionLabel release];
     [_howToPrepareLabel release];
-    [_receipt release];
     [_favoriteImageView release];
     [super dealloc];
 }

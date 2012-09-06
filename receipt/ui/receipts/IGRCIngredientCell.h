@@ -14,7 +14,8 @@
     id tableDelegate;
 }
 
-@property(nonatomic, retain) Product *product;
+@property(nonatomic, assign) Product *product;
+@property(nonatomic, assign) Ingredient *ingredient;
 @property(nonatomic, retain) IBOutlet UILabel *nameLabel;
 @property(nonatomic, retain) IBOutlet UILabel *weightLabel;
 @property(nonatomic, retain) IBOutlet UIButton *buyBtn;

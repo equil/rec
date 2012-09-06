@@ -77,6 +77,11 @@
 	[self.tableView beginUpdates];
 }
 
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+	[self.tableView endUpdates];
+}
+
+
 - (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
 		   atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
 	switch (type) {
@@ -115,9 +120,6 @@
 	}
 }
 
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-	[self.tableView endUpdates];
-}
 
 
 
@@ -127,8 +129,7 @@
 
 - (void)setFromCategory:(Category *)aFromCategory {
     self.fetchedResultsController = nil;
-    [_fromCategory release];
-    _fromCategory = [aFromCategory retain];
+    _fromCategory = aFromCategory;
 }
 
 
@@ -193,7 +194,6 @@
 
 - (void)dealloc {
     self.fetchedResultsController = nil;
-    [_fromCategory release];
     [_fetchedResultsController release];
     [super dealloc];
 }

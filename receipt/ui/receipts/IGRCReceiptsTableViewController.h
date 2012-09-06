@@ -14,7 +14,7 @@
 
 @interface IGRCReceiptsTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
-@property(nonatomic, retain) Category *fromCategory;
+@property(nonatomic, assign) Category *fromCategory;
 
 @property(nonatomic, retain, readonly) NSFetchedResultsController *fetchedResultsController;
 

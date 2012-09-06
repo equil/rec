@@ -16,4 +16,6 @@
 @property(nonatomic, retain, readonly) NSFetchedResultsController *fetchResultsController;
 @property(nonatomic, retain) IBOutlet UIBarButtonItem *addBarItem;
 
+- (IBAction)deleteAllGoods;
+
 @end

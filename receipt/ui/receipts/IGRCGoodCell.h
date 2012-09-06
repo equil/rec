@@ -15,7 +15,7 @@
     id tableDelegate;
 }
 
-@property(nonatomic, retain) Product *product;
+@property(nonatomic, assign) Product *product;
 @property(nonatomic, retain) IBOutlet UILabel *nameLabel;
 @property(nonatomic, retain) IBOutlet UILabel *weightLabel;
 

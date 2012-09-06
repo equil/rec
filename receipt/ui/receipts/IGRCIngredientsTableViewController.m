@@ -9,6 +9,8 @@
 #import "IGRCIngredientsTableViewController.h"
 #import "IGRCAppDelegate.h"
 #import "IGRCIngredientCell.h"
+#import "Good.h"
+#import "Product.h"
 
 @interface IGRCIngredientsTableViewController ()
 @property(nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
@@ -36,8 +38,7 @@
 
 - (void)setFromReceipt:(Receipt *)afromReceipt {
     self.fetchedResultsController = nil;
-    [_fromReceipt release];
-    _fromReceipt = [afromReceipt retain];
+    _fromReceipt = afromReceipt;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -187,9 +188,94 @@
 
 - (void)dealloc {
     self.fetchedResultsController = nil;
-    [_fromReceipt release];
     [_fetchedResultsController release];
     [super dealloc];
+}
+
+- (IBAction)addAllIngredients
+{
+    NSArray *ingredients = [self getAllIngredients];
+    for (Ingredient *i in ingredients) {
+        [self buyItem:i];
+    }
+}
+
+- (NSArray *)getAllIngredients
+{
+    IGRCAppDelegate *delegate = (IGRCAppDelegate *) [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = delegate.dataAccessManager.managedObjectContext;
+    
+    NSFetchRequest *fetch = [[NSFetchRequest alloc] init];
+    [fetch setEntity:[NSEntityDescription entityForName:@"Ingredient"
+                                 inManagedObjectContext:context]];
+    
+    [fetch setPredicate:[self predicateForFetchedController]];
+    
+    NSError *error;
+    
+    NSArray *ingredients = [context executeFetchRequest:fetch error:&error];
+    
+    [fetch release];
+    
+    return ingredients;
+}
+
+- (void)buyItem:(Ingredient *)ingredient
+{
+    IGRCAppDelegate *delegate = (IGRCAppDelegate *) [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = delegate.dataAccessManager.managedObjectContext;
+    
+    NSArray *arr = [self entityExist:ingredient];
+    if (arr == nil)
+    {
+        Good *newGood = [NSEntityDescription insertNewObjectForEntityForName:@"Good" inManagedObjectContext:context];
+        newGood.product = ingredient.product;
+        newGood.weight = ingredient.weight;
+    }
+    else
+    {
+        Good *g = (Good *)[arr objectAtIndex:0];
+        g.weight = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%i", [g.weight intValue] + [ingredient.weight intValue]]];
+    }
+    
+    [delegate.dataAccessManager saveState];
+    [self incFavoriteTabBarItemBadge];
+}
+
+- (void)incFavoriteTabBarItemBadge
+{
+    if (((UITabBarItem *)[self.tabBarController.tabBar.items objectAtIndex:2]).badgeValue == nil)
+    {
+        ((UITabBarItem *)[self.tabBarController.tabBar.items objectAtIndex:2]).badgeValue = @"1";
+    }
+    else
+    {
+        ((UITabBarItem *)[self.tabBarController.tabBar.items objectAtIndex:2]).badgeValue = [NSString stringWithFormat:@"%d", [((UITabBarItem *)[self.tabBarController.tabBar.items objectAtIndex:2]).badgeValue intValue] + 1];
+    }
+}
+
+- (NSArray *)entityExist:(Ingredient *)ingredient
+{
+    IGRCAppDelegate *delegate = (IGRCAppDelegate *) [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = delegate.dataAccessManager.managedObjectContext;
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:[NSEntityDescription entityForName:@"Good" inManagedObjectContext:context]];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"product.title ==[c] %@", ingredient.product.title];
+    
+    [request setPredicate:predicate];
+    [request setIncludesSubentities:NO];
+    
+    NSError *err;
+    NSArray *good = [context executeFetchRequest:request error:&err];
+    
+    [request release];
+    
+    if ([good count] < 1 || good == nil)
+        return nil;
+    
+    return good;
 }
 
 @end

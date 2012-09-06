@@ -14,19 +14,20 @@
 @implementation IGRCIngredientCell
 
 @synthesize product = _product;
+@synthesize ingredient = _ingredient;
 @synthesize nameLabel = _nameLabel;
 @synthesize weightLabel = _weightLabel;
 @synthesize buyBtn = _buyBtn;
 
 - (void)configureCellWithIngredient:(Ingredient *)ingredient andDelegate:(id)aDelegate {
     tableDelegate = aDelegate;
+    _ingredient = ingredient;
     _product = ingredient.product;
     _nameLabel.text = ingredient.product.title;
-    _weightLabel.text = [NSString stringWithFormat:@"%i гр.", [ingredient.weight intValue]];
+    _weightLabel.text = [NSString stringWithFormat:@"%i %@.", [ingredient.weight intValue], _product.unit];
 }
 
 - (void)dealloc {
-    [_product release];
     [_nameLabel release];
     [_weightLabel release];
     [_buyBtn release];
@@ -43,12 +44,12 @@
     {
         Good *newGood = [NSEntityDescription insertNewObjectForEntityForName:@"Good" inManagedObjectContext:context];
         newGood.product = _product;
-        newGood.weight = [NSDecimalNumber decimalNumberWithString:_weightLabel.text];
+        newGood.weight = _ingredient.weight;
     }
     else
     {
         Good *g = (Good *)[arr objectAtIndex:0];
-        g.weight = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%i", [g.weight intValue] + [_weightLabel.text intValue]]];
+        g.weight = [NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%i", [g.weight intValue] + [_ingredient.weight intValue]]];
     }
     
     [delegate.dataAccessManager saveState];
@@ -75,7 +76,7 @@
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:[NSEntityDescription entityForName:@"Good" inManagedObjectContext:context]];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"product.title ==[c] %@", _nameLabel.text];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"product.title ==[c] %@", _product.title];
     
     [request setPredicate:predicate];
     [request setIncludesSubentities:NO];

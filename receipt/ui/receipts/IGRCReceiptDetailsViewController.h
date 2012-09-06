@@ -19,7 +19,7 @@
 @property(nonatomic, retain) IBOutlet UILabel *howToPrepareLabel;
 @property(nonatomic, retain) IBOutlet UIImageView *favoriteImageView;
 
-@property(nonatomic, retain) Receipt *receipt;
+@property(nonatomic, assign) Receipt *receipt;
 
 - (IBAction)switchFavoriteState;
 

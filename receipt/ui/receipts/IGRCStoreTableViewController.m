@@ -42,6 +42,8 @@
     if (!success) {
         NSLog(@"Error on fetching: %@", [error userInfo]);
     }
+    
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload
@@ -121,6 +123,16 @@
     return _fetchResultsController;
 }
 
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+	[self.tableView beginUpdates];
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+	[self.tableView endUpdates];
+}
+
+
+
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
 	   atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
 	  newIndexPath:(NSIndexPath *)newIndexPath {
@@ -163,6 +175,54 @@
         [context deleteObject: [self.fetchResultsController objectAtIndexPath:indexPath]];
         [delegate.dataAccessManager saveState];
     }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"Удалить";
+}
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    [super setEditing:editing animated:animated];
+    [self.tableView setEditing:editing animated:animated];
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (IBAction)deleteAllGoods
+{
+    IGRCAppDelegate *delegate = (IGRCAppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = delegate.dataAccessManager.managedObjectContext;
+    NSArray *goods = [self getAllGoods];
+    
+    for (Good *g in goods)
+    {
+        [context deleteObject:g];
+    }
+    
+    [delegate.dataAccessManager saveState];
+}
+
+- (NSArray *)getAllGoods
+{
+    IGRCAppDelegate *delegate = (IGRCAppDelegate *) [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = delegate.dataAccessManager.managedObjectContext;
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:[NSEntityDescription entityForName:@"Good" inManagedObjectContext:context]];
+    
+    [request setIncludesSubentities:NO];
+    
+    NSError *err;
+    NSArray *goods = [context executeFetchRequest:request error:&err];
+    
+    [request release];
+    
+    return goods;
 }
 
 - (void)dealloc {

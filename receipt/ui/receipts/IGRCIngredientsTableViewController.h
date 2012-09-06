@@ -12,9 +12,10 @@
 
 @interface IGRCIngredientsTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
-@property(nonatomic, retain) Receipt *fromReceipt;
+@property(nonatomic, assign) Receipt *fromReceipt;
 @property(nonatomic, retain, readonly) NSFetchedResultsController *fetchedResultsController;
 
 - (NSPredicate *)predicateForFetchedController;
+- (IBAction)addAllIngredients;
 
 @end

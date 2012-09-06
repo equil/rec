@@ -33,9 +33,7 @@
         
         arrayOfFavoritesTemp = [[NSMutableArray alloc] init];
         
-        
-        
-        
+//--------------------------------------------------
 //        NSArray *arrP = [self getArrayOfProducts];
 //        NSLog(@"arrP %d", [arrP count]);
 //
@@ -76,6 +74,8 @@
 ////                [_context deleteObject:i];
 ////            j++;
 //        }
+//--------------------------------------------------
+
     }
     return self;
 }
