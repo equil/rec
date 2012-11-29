@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1487" systemVersion="12B19" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C3006" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Category" representedClassName="Category" syncable="YES">
         <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="title" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="FourItem" representedClassName="FourItem" syncable="YES">
+        <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Good" representedClassName="Good" syncable="YES">
         <attribute name="weight" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
@@ -32,11 +37,16 @@
             </compoundIndex>
         </compoundIndexes>
     </entity>
+    <entity name="Setting" representedClassName="Setting" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Category" positionX="0" positionY="0" width="128" height="75"/>
         <element name="Good" positionX="0" positionY="0" width="128" height="75"/>
         <element name="Ingredient" positionX="0" positionY="0" width="128" height="90"/>
         <element name="Product" positionX="0" positionY="0" width="128" height="75"/>
         <element name="Receipt" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="FourItem" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Setting" positionX="160" positionY="192" width="128" height="60"/>
     </elements>
 </model>

@@ -9,6 +9,7 @@
 #import "IGRCFromCategoryToReceiptSegue.h"
 #import "IGRCReceiptDetailsSeguePreparer.h"
 #import "IGRCFromReceiptToIngredientSegue.h"
+#import "IGRCFourToDetailSegue.h"
 
 @interface IGRCSeguePrepareStrategy () {
 
@@ -27,6 +28,7 @@
         [strategies setObject:[[[IGRCFromCategoryToReceiptSegue alloc] init] autorelease] forKey:@"CategoryToReceiptSegue"];
         [strategies setObject:[[[IGRCReceiptDetailsSeguePreparer alloc] init] autorelease] forKey:@"ReceiptDetailsSegue"];
         [strategies setObject:[[[IGRCFromReceiptToIngredientSegue alloc] init] autorelease] forKey:@"ReceiptToIngredientSegue"];
+        [strategies setObject:[[[IGRCFourToDetailSegue alloc] init] autorelease] forKey:@"FourToDetail"];
         _strategies = strategies;
     }
     return self;

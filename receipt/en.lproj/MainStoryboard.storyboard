@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
                 <tabBarController id="4" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
@@ -23,13 +21,13 @@
                         <segue destination="4Sc-ky-saO" kind="relationship" relationship="viewControllers" id="4sE-Og-fDB"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-832" y="-1381"/>
         </scene>
         <!--Navigation Controller - Рецепты-->
         <scene sceneID="EgA-iD-Rq4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gf1-q3-tka" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="Nza-Ji-99f" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Рецепты" id="Xv7-Yf-kl8"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="sqH-rG-yJh">
@@ -39,13 +37,13 @@
                         <segue destination="VOJ-uu-RNY" kind="relationship" relationship="rootViewController" id="ncy-jh-l8C"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gf1-q3-tka" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-281" y="-1383"/>
         </scene>
         <!--Category Table View Controller - Рецепты-->
         <scene sceneID="nJ4-ga-9uH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Uh-p6-1B9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="VOJ-uu-RNY" customClass="IGRCCategoryTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="49" sectionHeaderHeight="22" sectionFooterHeight="22" id="WEW-Es-Z7Z">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -87,13 +85,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Рецепты" id="T1h-TL-zFW"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Uh-p6-1B9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="299" y="-1375"/>
         </scene>
         <!--Receipts Table View Controller-->
         <scene sceneID="Ide-Y0-gig">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nwm-vV-atn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="fMj-db-OQw" customClass="IGRCReceiptsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="57" sectionHeaderHeight="22" sectionFooterHeight="22" id="jX7-0f-Rjq">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -144,13 +142,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="KaS-v4-2FJ"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nwm-vV-atn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="827" y="-1346"/>
         </scene>
         <!--Receipt Details View Controller-->
         <scene sceneID="G3b-OI-qkq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9jC-Br-8g6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="6bS-9k-mXu" customClass="IGRCReceiptDetailsViewController" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" id="Ggj-9Z-Ycd">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -235,15 +233,15 @@
                         <outlet property="receiptImage" destination="DYm-Zd-pA9" id="h7l-FN-WiQ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9jC-Br-8g6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1389" y="-650"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Вкладка-->
         <scene sceneID="4Qq-6f-GzV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lQU-Dx-ebU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="4Sc-ky-saO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="V5i-sU-N5S"/>
+                    <tabBarItem key="tabBarItem" title="Вкладка" id="V5i-sU-N5S"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8zf-Mm-Y3X">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -251,27 +249,39 @@
                         <segue destination="7sf-69-uMN" kind="relationship" relationship="rootViewController" id="Wnz-Ib-a9Y"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQU-Dx-ebU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-289" y="721"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Four Table View Controller - Четвертая вкладка-->
         <scene sceneID="31d-PV-Fgr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vaf-0G-zj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="7sf-69-uMN" sceneMemberID="viewController">
+                <tableViewController id="7sf-69-uMN" customClass="IGRCFourTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wJP-B9-JxN">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oFp-80-rDY">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FourItemCell" textLabel="lkk-Ga-ZI7" style="IBUITableViewCellStyleDefault" id="oFp-80-rDY" customClass="IGRCFourItemCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lkk-Ga-ZI7">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="klm-8r-qD2" kind="push" identifier="FourToDetail" id="wpT-1u-htA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -279,15 +289,48 @@
                             <outlet property="delegate" destination="7sf-69-uMN" id="o5p-VD-9DA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="JA5-7k-yZA"/>
+                    <navigationItem key="navigationItem" title="Четвертая вкладка" id="JA5-7k-yZA"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vaf-0G-zj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="275" y="729"/>
+        </scene>
+        <!--Four Detail View Controller-->
+        <scene sceneID="FLL-md-MrK">
+            <objects>
+                <viewController id="klm-8r-qD2" customClass="IGRCFourDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VMO-96-ksq">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="JfK-jq-QI9">
+                                <rect key="frame" x="95" y="6" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="UqC-U3-8iN">
+                                <rect key="frame" x="20" y="144" width="280" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fns-5R-Unw"/>
+                    <connections>
+                        <outlet property="imageView" destination="JfK-jq-QI9" id="KNd-As-rdo"/>
+                        <outlet property="textView" destination="UqC-U3-8iN" id="hsr-cA-ahY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ptt-XV-5Ql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702" y="729"/>
         </scene>
         <!--Navigation Controller - Магазин-->
         <scene sceneID="hpn-fG-tE1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iHu-ml-3wc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="VcQ-de-1NH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Магазин" id="3xU-B7-X2h"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="KHr-MY-peO">
@@ -297,13 +340,13 @@
                         <segue destination="Dix-1n-Raz" kind="relationship" relationship="rootViewController" id="YiJ-6Y-y0l"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iHu-ml-3wc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-301" y="25"/>
         </scene>
         <!--Navigation Controller - Избранное-->
         <scene sceneID="7Fr-EH-ofE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fcc-Bg-lFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="dHz-OZ-sFY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Избранное" id="uBy-Rg-5A9"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3o4-N2-ef7">
@@ -313,13 +356,13 @@
                         <segue destination="BGZ-5G-jCq" kind="relationship" relationship="rootViewController" id="TB9-fs-aqG"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcc-Bg-lFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-285" y="-655"/>
         </scene>
         <!--Add Good View Controller - Добавление продукта-->
         <scene sceneID="ihA-NE-Ydb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iQi-0g-whO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="1tu-4g-7qd" customClass="IGRCAddGoodViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UpM-sa-qtX">
                         <rect key="frame" x="0.0" y="64" width="320" height="198"/>
@@ -407,13 +450,13 @@
                         <outlet property="weightField" destination="JXh-Gy-mCY" id="EAu-XV-n0t"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQi-0g-whO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="770" y="8"/>
         </scene>
         <!--Store Table View Controller - Магазин-->
         <scene sceneID="Oho-GL-sir">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RTo-AX-0dn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Dix-1n-Raz" customClass="IGRCStoreTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6ap-gm-o6w">
                         <rect key="frame" x="0.0" y="64" width="320" height="372"/>
@@ -479,13 +522,13 @@
                         <outlet property="addBarItem" destination="75v-0h-PZk" id="fz9-jr-O1W"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RTo-AX-0dn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="313" y="8"/>
         </scene>
         <!--Favorite Receipts Table View Controller - Избранное-->
         <scene sceneID="hHG-jL-vRE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EaA-rW-bfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="BGZ-5G-jCq" customClass="IGRCFavoriteReceiptsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="57" sectionHeaderHeight="22" sectionFooterHeight="22" id="1Hb-jI-XtQ">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -536,13 +579,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Избранное" id="xSG-N3-E8W"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EaA-rW-bfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="299" y="-650"/>
         </scene>
         <!--Ingredients Table View Controller-->
         <scene sceneID="rmY-0B-7hV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h0y-te-XOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="hGU-Vd-WWl" customClass="IGRCIngredientsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="Kus-ME-kzB">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -608,6 +651,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0y-te-XOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1870" y="-655"/>
         </scene>
@@ -645,6 +689,19 @@
         </class>
         <class className="IGRCFavoriteReceiptsTableViewController" superclassName="IGRCReceiptsTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IGRCFavoriteReceiptsTableViewController.h"/>
+        </class>
+        <class className="IGRCFourDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGRCFourDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="IGRCFourItemCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGRCFourItemCell.h"/>
+        </class>
+        <class className="IGRCFourTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGRCFourTableViewController.h"/>
         </class>
         <class className="IGRCGoodCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IGRCGoodCell.h"/>
