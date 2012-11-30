@@ -11,11 +11,21 @@
 @implementation IGRCFourItemCell
 
 @synthesize fourItem = _fourItem;
+@synthesize image = _image;
+@synthesize label = _label;
 
 - (void)configureCellWithFourItem:(FourItem *)fourItem
 {
     _fourItem = fourItem;
-    self.textLabel.text = fourItem.title;
+    self.image.image = fourItem.image;
+    self.label.text = fourItem.title;
+}
+
+- (void)dealloc
+{
+    self.image = nil;
+    self.label = nil;
+    [super dealloc];
 }
 
 @end

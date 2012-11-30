@@ -12,6 +12,8 @@
 @interface IGRCFourItemCell : UITableViewCell
 
 @property(nonatomic, assign) FourItem *fourItem;
+@property(nonatomic, retain) IBOutlet UIImageView *image;
+@property(nonatomic, retain) IBOutlet UILabel *label;
 
 - (void) configureCellWithFourItem:(FourItem *)fourItem;
 
