@@ -23,15 +23,7 @@
 }
 
 @synthesize addBarItem;
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize checked = _checked;
 
 - (void)viewDidLoad
 {
@@ -131,8 +123,6 @@
 	[self.tableView endUpdates];
 }
 
-
-
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
 	   atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
 	  newIndexPath:(NSIndexPath *)newIndexPath {
@@ -163,6 +153,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    Good *good = [self.fetchResultsController objectAtIndexPath:indexPath];
+    BOOL temp = ![good.checked boolValue];
+    
+    IGRCAppDelegate *delegate = (IGRCAppDelegate *)[[UIApplication sharedApplication] delegate];
+    good.checked = [NSNumber numberWithBool:temp];
+    [delegate.dataAccessManager saveState];
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if (temp == NO)
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -174,6 +181,20 @@
         
         [context deleteObject: [self.fetchResultsController objectAtIndexPath:indexPath]];
         [delegate.dataAccessManager saveState];
+    }
+}
+
+- (void)refreshChecked
+{
+    [_checked release];
+    _checked = [[NSMutableArray alloc] init];
+    
+    if ([[self.fetchResultsController sections] count] > 0)
+    {
+        for (int j = 0; j < [[[self.fetchResultsController sections] objectAtIndex:0] numberOfObjects]; j++)
+        {
+            [_checked addObject:[NSNumber numberWithBool:NO]];
+        }
     }
 }
 
@@ -225,9 +246,28 @@
     return goods;
 }
 
+- (NSArray *)getGoods
+{
+    IGRCAppDelegate *delegate = (IGRCAppDelegate *) [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = delegate.dataAccessManager.managedObjectContext;
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:[NSEntityDescription entityForName:@"Good" inManagedObjectContext:context]];
+    
+    [request setIncludesSubentities:NO];
+    
+    NSError *err;
+    NSArray *goods = [context executeFetchRequest:request error:&err];
+    
+    [request release];
+    
+    return goods;
+}
+
 - (void)dealloc {
     [_fetchResultsController release];
     [addBarItem release];
+    [_checked release];
     [super dealloc];
 }
 

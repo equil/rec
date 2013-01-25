@@ -14,6 +14,7 @@
 @interface IGRCStoreTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property(nonatomic, retain, readonly) NSFetchedResultsController *fetchResultsController;
+@property(nonatomic, retain) NSMutableArray *checked;
 @property(nonatomic, retain) IBOutlet UIBarButtonItem *addBarItem;
 
 - (IBAction)deleteAllGoods;

@@ -17,6 +17,7 @@
 		1EAC81E51667BEB700D6ED80 /* IGRCFourToDetailSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC81E41667BEB700D6ED80 /* IGRCFourToDetailSegue.m */; };
 		1EAC81E81667BF8400D6ED80 /* IGRCFourDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC81E71667BF8300D6ED80 /* IGRCFourDetailViewController.m */; };
 		1EAC81EF1667EBA100D6ED80 /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC81EE1667EBA100D6ED80 /* Setting.m */; };
+		1EDADD6716B041530028EA70 /* Good.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDADD6616B041530028EA70 /* Good.m */; };
 		1EDD3B8B15F4BC81006DAC5B /* IGRCAddGoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDD3B8A15F4BC81006DAC5B /* IGRCAddGoodViewController.m */; };
 		1EDD3B9B15F89F3B006DAC5B /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDD3B9A15F89F3B006DAC5B /* Product.m */; };
 		1EDD3B9D15F8F567006DAC5B /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1EDD3B9C15F8F567006DAC5B /* db.sqlite */; };
@@ -25,7 +26,6 @@
 		6556536AD50057F13318DB27 /* IGRCIngredientsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565497108C9715B18EAFE8 /* IGRCIngredientsTableViewController.m */; };
 		6556541AB643E31AFF813CD9 /* IGRCReceiptsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556586D709CB9E1884EB869 /* IGRCReceiptsTableViewController.m */; };
 		65565560DD69D47619BDE944 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 65565C5E4C1B912A4148067E /* test.png */; };
-		655655AC295ACAC5DED26CA7 /* Good.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565008275438E8AE92B0EF /* Good.m */; };
 		655655E5CB6492C274D7EAA8 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655650686C91757AFB7413B2 /* first@2x.png */; };
 		6556563B33965679F1FCDBCA /* IGRCReceiptDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556550ACD76E7B216CB6122 /* IGRCReceiptDetailsViewController.m */; };
 		6556586F980B8D2048D19F21 /* Receipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565A22227B1C8FDB73BBFF /* Receipt.m */; };
@@ -73,12 +73,13 @@
 		1EAC81E71667BF8300D6ED80 /* IGRCFourDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGRCFourDetailViewController.m; sourceTree = "<group>"; };
 		1EAC81ED1667EBA100D6ED80 /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		1EAC81EE1667EBA100D6ED80 /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
+		1EDADD6516B041530028EA70 /* Good.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Good.h; sourceTree = "<group>"; };
+		1EDADD6616B041530028EA70 /* Good.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Good.m; sourceTree = "<group>"; };
 		1EDD3B8915F4BC81006DAC5B /* IGRCAddGoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCAddGoodViewController.h; sourceTree = "<group>"; };
 		1EDD3B8A15F4BC81006DAC5B /* IGRCAddGoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGRCAddGoodViewController.m; sourceTree = "<group>"; };
 		1EDD3B9915F89F3B006DAC5B /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		1EDD3B9A15F89F3B006DAC5B /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		1EDD3B9C15F8F567006DAC5B /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
-		65565008275438E8AE92B0EF /* Good.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Good.m; sourceTree = "<group>"; };
 		655650686C91757AFB7413B2 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		655650F4CB826A5155369173 /* IGRCDataAccessManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCDataAccessManager.h; sourceTree = "<group>"; };
 		6556510C5A64B8A9EE829CC2 /* IGRCReceiptCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGRCReceiptCell.m; sourceTree = "<group>"; };
@@ -106,7 +107,6 @@
 		65565900ACBA1C2E2D9E4598 /* IGRCReceiptDetailsSeguePreparer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGRCReceiptDetailsSeguePreparer.m; sourceTree = "<group>"; };
 		655659D67CCC5E6629387F55 /* IGRCFromCategoryToReceiptSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCFromCategoryToReceiptSegue.h; sourceTree = "<group>"; };
 		65565A22227B1C8FDB73BBFF /* Receipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Receipt.m; sourceTree = "<group>"; };
-		65565A80F78E252EAA0B0D73 /* Good.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Good.h; sourceTree = "<group>"; };
 		65565A9083775279257D3BE1 /* IGRCSeguePrepareStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCSeguePrepareStrategy.h; sourceTree = "<group>"; };
 		65565AA70530F50BDEE252BD /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		65565C5E4C1B912A4148067E /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
@@ -183,8 +183,6 @@
 				1E4C8E3015F32CE2005E49B8 /* Ingredient.m */,
 				65565A22227B1C8FDB73BBFF /* Receipt.m */,
 				65565411FEFAB1EB03B82F4A /* Receipt.h */,
-				65565008275438E8AE92B0EF /* Good.m */,
-				65565A80F78E252EAA0B0D73 /* Good.h */,
 				655657FBDD8F653399B88189 /* Category.m */,
 				655654DB9F9741FB8444F929 /* Category.h */,
 				6B39552915F2A7500045F35A /* receipt.xcdatamodeld */,
@@ -192,6 +190,8 @@
 				1EAC81E11667B01200D6ED80 /* FourItem.m */,
 				1EAC81ED1667EBA100D6ED80 /* Setting.h */,
 				1EAC81EE1667EBA100D6ED80 /* Setting.m */,
+				1EDADD6516B041530028EA70 /* Good.h */,
+				1EDADD6616B041530028EA70 /* Good.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -391,7 +391,6 @@
 				65565FBC36FD55C964215504 /* IGRCDataAccessManager.m in Sources */,
 				65565ABA8F6012414577299A /* IGRCFavoritesBadgeObserver.m in Sources */,
 				65565CD977E4CA22ED37DADE /* Category.m in Sources */,
-				655655AC295ACAC5DED26CA7 /* Good.m in Sources */,
 				6556586F980B8D2048D19F21 /* Receipt.m in Sources */,
 				65565BDCDEA99F20BD51E839 /* IGRCCategoryCell.m in Sources */,
 				655658E5FBD1F6E92AC34FC5 /* IGRCCategoryTableViewController.m in Sources */,
@@ -417,6 +416,7 @@
 				1EAC81E51667BEB700D6ED80 /* IGRCFourToDetailSegue.m in Sources */,
 				1EAC81E81667BF8400D6ED80 /* IGRCFourDetailViewController.m in Sources */,
 				1EAC81EF1667EBA100D6ED80 /* Setting.m in Sources */,
+				1EDADD6716B041530028EA70 /* Good.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,11 +492,13 @@
 		6B3C4FEF15F292E100FF10D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: OOO InTech";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "receipt/receipt-Prefix.pch";
 				INFOPLIST_FILE = "receipt/receipt-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "118144FF-F5D1-4F66-B2E3-8742ACB97E27";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -504,11 +506,13 @@
 		6B3C4FF015F292E100FF10D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: OOO InTech";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "receipt/receipt-Prefix.pch";
 				INFOPLIST_FILE = "receipt/receipt-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "118144FF-F5D1-4F66-B2E3-8742ACB97E27";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

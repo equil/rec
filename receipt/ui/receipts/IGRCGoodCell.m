@@ -19,6 +19,15 @@
     _product = good.product;
     _nameLabel.text = good.product.title;
     _weightLabel.text = [NSString stringWithFormat:@"%i %@.", [good.weight intValue], _product.unit];
+    
+    if ([good.checked boolValue] == NO)
+    {
+        self.accessoryType = UITableViewCellAccessoryNone;
+    }
+    else
+    {
+        self.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
 }
 
 - (void)dealloc {

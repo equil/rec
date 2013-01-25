@@ -10,6 +10,7 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Good" representedClassName="Good" syncable="YES">
+        <attribute name="checked" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="weight" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <relationship name="product" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Product" syncable="YES"/>
     </entity>
@@ -42,11 +43,11 @@
     </entity>
     <elements>
         <element name="Category" positionX="0" positionY="0" width="128" height="75"/>
-        <element name="Good" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="FourItem" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Good" positionX="0" positionY="0" width="128" height="90"/>
         <element name="Ingredient" positionX="0" positionY="0" width="128" height="90"/>
         <element name="Product" positionX="0" positionY="0" width="128" height="75"/>
         <element name="Receipt" positionX="0" positionY="0" width="128" height="165"/>
-        <element name="FourItem" positionX="160" positionY="192" width="128" height="90"/>
         <element name="Setting" positionX="160" positionY="192" width="128" height="60"/>
     </elements>
 </model>
