@@ -18,6 +18,7 @@
 		1EAC81E81667BF8400D6ED80 /* IGRCFourDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC81E71667BF8300D6ED80 /* IGRCFourDetailViewController.m */; };
 		1EAC81EF1667EBA100D6ED80 /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC81EE1667EBA100D6ED80 /* Setting.m */; };
 		1EDADD6716B041530028EA70 /* Good.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDADD6616B041530028EA70 /* Good.m */; };
+		1EDADDE816B2ABEF0028EA70 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EDADDE716B2ABEF0028EA70 /* Default-568h@2x.png */; };
 		1EDD3B8B15F4BC81006DAC5B /* IGRCAddGoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDD3B8A15F4BC81006DAC5B /* IGRCAddGoodViewController.m */; };
 		1EDD3B9B15F89F3B006DAC5B /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDD3B9A15F89F3B006DAC5B /* Product.m */; };
 		1EDD3B9D15F8F567006DAC5B /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1EDD3B9C15F8F567006DAC5B /* db.sqlite */; };
@@ -75,6 +76,7 @@
 		1EAC81EE1667EBA100D6ED80 /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
 		1EDADD6516B041530028EA70 /* Good.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Good.h; sourceTree = "<group>"; };
 		1EDADD6616B041530028EA70 /* Good.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Good.m; sourceTree = "<group>"; };
+		1EDADDE716B2ABEF0028EA70 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1EDD3B8915F4BC81006DAC5B /* IGRCAddGoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGRCAddGoodViewController.h; sourceTree = "<group>"; };
 		1EDD3B8A15F4BC81006DAC5B /* IGRCAddGoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGRCAddGoodViewController.m; sourceTree = "<group>"; };
 		1EDD3B9915F89F3B006DAC5B /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 		6B3C4FBA15F292E100FF10D1 = {
 			isa = PBXGroup;
 			children = (
+				1EDADDE716B2ABEF0028EA70 /* Default-568h@2x.png */,
 				6B3C4FCF15F292E100FF10D1 /* receipt */,
 				6B3C4FC815F292E100FF10D1 /* Frameworks */,
 				6B3C4FC615F292E100FF10D1 /* Products */,
@@ -376,6 +379,7 @@
 				65565C7B90ED6E0F41F3B1E9 /* second@2x.png in Resources */,
 				65565560DD69D47619BDE944 /* test.png in Resources */,
 				1EDD3B9D15F8F567006DAC5B /* db.sqlite in Resources */,
+				1EDADDE816B2ABEF0028EA70 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -226,7 +226,7 @@ static NSString *const METADATA_FILE_NAME = @"db.sqlite";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    _fullVersion = YES;
+    _fullVersion = NO;
     _link = [[NSString alloc] initWithString:@"http://www.google.ru"];
     
     //[self prepareDatabase];
