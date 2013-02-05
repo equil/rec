@@ -22,7 +22,6 @@
 @synthesize receipt = _receipt;
 @synthesize favoriteImageView = _favoriteImageView;
 
-
 - (void)reconfigureControllerView {
     self.receiptImage.image = _receipt.image;
     self.descriptionLabel.text = _receipt.descript;
@@ -41,8 +40,6 @@
     IGRCAppDelegate *delegate = (IGRCAppDelegate *) [[UIApplication sharedApplication] delegate];
     [delegate.segueStrategy prepareForSegue:segue parameter:sender];
 }
-
-
 
 - (IBAction)switchFavoriteState {
     _receipt.favorite = [NSNumber numberWithBool:![_receipt.favorite boolValue]];

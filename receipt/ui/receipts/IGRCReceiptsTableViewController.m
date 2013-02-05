@@ -12,6 +12,7 @@
 #import "IGRCAppDelegate.h"
 #import "Receipt.h"
 #import "IGRCReceiptCell.h"
+#import "IGRCReceiptDetailsViewController.h"
 
 @interface IGRCReceiptsTableViewController ()
 @property(nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
@@ -23,6 +24,8 @@
     Category *_fromCategory;
     NSFetchedResultsController *_fetchedResultsController;
 }
+@synthesize filteredArray = _filteredArray;
+@synthesize searchBar = _searchBar;
 
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
@@ -33,7 +36,7 @@
 }
 
 - (NSPredicate *)predicateForFetchedController {
-    return [NSPredicate predicateWithFormat:@"category == %@", self.fromCategory];
+    return [NSPredicate predicateWithFormat:@"category == %@", self.fromCategory ];
 }
 
 - (void)fetchData {
@@ -135,6 +138,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.filteredArray = [NSMutableArray array];
 }
 
 - (void)viewDidUnload {
@@ -153,28 +157,64 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    IGRCAppDelegate *delegate = (IGRCAppDelegate *) [[UIApplication sharedApplication] delegate];
-    [delegate.segueStrategy prepareForSegue:segue parameter:sender];
+    if ([sender isKindOfClass:[IGRCReceiptCell class]])
+    {
+        NSIndexPath *const path = [((IGRCReceiptsTableViewController* )segue.sourceViewController).tableView indexPathForCell:sender];
+        ((IGRCReceiptDetailsViewController* )segue.destinationViewController).receipt = [((IGRCReceiptsTableViewController* )segue.sourceViewController).fetchedResultsController objectAtIndexPath:path];
+    }
+    else
+    {
+        NSIndexPath *const path = [((IGRCReceiptsTableViewController* )segue.sourceViewController).searchDisplayController.searchResultsTableView indexPathForCell:sender];
+        ((IGRCReceiptDetailsViewController* )segue.destinationViewController).receipt = [((IGRCReceiptsTableViewController* )segue.sourceViewController).filteredArray objectAtIndex:path.row];
+    }
+    
+    UIScrollView *scrollView = (UIScrollView *)((IGRCReceiptDetailsViewController* )segue.destinationViewController).view;
+    UIView *view = [scrollView.subviews objectAtIndex:0];
+    scrollView.contentSize = CGSizeMake(view.frame.size.width, view.frame.size.height);
 }
 
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.fetchedResultsController.sections.count;
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        return 1;
+    }
+    else
+    {
+        return self.fetchedResultsController.sections.count;   
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:(NSUInteger) section];
-    return [sectionInfo numberOfObjects];
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        return [self.filteredArray count];
+    } else {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:(NSUInteger) section];
+        return [sectionInfo numberOfObjects];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"ReceiptCell";
-    IGRCReceiptCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
-    Receipt *receipt = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [cell configureWithReceipt:receipt];
+    if ( cell == nil ) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    Receipt *receipt;
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        receipt = [self.filteredArray objectAtIndex:indexPath.row];
+        cell.textLabel.text = receipt.title;
+    } else {
+        receipt = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        [(IGRCReceiptCell *)cell configureWithReceipt:receipt];
+    }
 
     return cell;
 }
@@ -182,19 +222,38 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        [self performSegueWithIdentifier:@"ReceiptDetailsSegue" sender:tableView];
+    }
+}
+
+-(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
+    [self.filteredArray removeAllObjects];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title contains[c] %@",searchText];
+    self.filteredArray = [NSMutableArray arrayWithArray:[[self.fetchedResultsController fetchedObjects] filteredArrayUsingPredicate:predicate]];
+}
+
+#pragma mark - UISearchDisplayController Delegate Methods
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    [self filterContentForSearchText:searchString scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    return YES;
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
+    // Tells the table data source to reload when scope bar selection changes
+    [self filterContentForSearchText:self.searchDisplayController.searchBar.text scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
 }
 
 - (void)dealloc {
     self.fetchedResultsController = nil;
     [_fetchedResultsController release];
+    [_filteredArray release];
+    self.searchBar = nil;
     [super dealloc];
 }
 

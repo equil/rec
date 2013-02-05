@@ -12,13 +12,15 @@
 @class Category;
 @class NSFetchedResultsController;
 
-@interface IGRCReceiptsTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface IGRCReceiptsTableViewController : UITableViewController <NSFetchedResultsControllerDelegate, UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property(nonatomic, assign) Category *fromCategory;
 
 @property(nonatomic, retain, readonly) NSFetchedResultsController *fetchedResultsController;
 
-- (NSPredicate *)predicateForFetchedController;
+@property (retain, nonatomic) NSMutableArray *filteredArray;
+@property (retain, nonatomic) IBOutlet UISearchBar *searchBar;
 
+- (NSPredicate *)predicateForFetchedController;
 
 @end
