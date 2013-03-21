@@ -159,12 +159,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([sender isKindOfClass:[IGRCReceiptCell class]])
     {
-        NSIndexPath *const path = [((IGRCReceiptsTableViewController* )segue.sourceViewController).tableView indexPathForCell:sender];
+        NSIndexPath *path = [((IGRCReceiptsTableViewController* )segue.sourceViewController).tableView indexPathForCell:sender];
         ((IGRCReceiptDetailsViewController* )segue.destinationViewController).receipt = [((IGRCReceiptsTableViewController* )segue.sourceViewController).fetchedResultsController objectAtIndexPath:path];
     }
     else
     {
-        NSIndexPath *const path = [((IGRCReceiptsTableViewController* )segue.sourceViewController).searchDisplayController.searchResultsTableView indexPathForCell:sender];
+        NSIndexPath *path = [((IGRCReceiptsTableViewController* )segue.sourceViewController).searchDisplayController.searchResultsTableView indexPathForCell:sender];
         ((IGRCReceiptDetailsViewController* )segue.destinationViewController).receipt = [((IGRCReceiptsTableViewController* )segue.sourceViewController).filteredArray objectAtIndex:path.row];
     }
     
@@ -224,7 +224,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.searchDisplayController.searchResultsTableView)
     {
-        [self performSegueWithIdentifier:@"ReceiptDetailsSegue" sender:tableView];
+        [self performSegueWithIdentifier:@"ReceiptDetailsSegue" sender:[tableView cellForRowAtIndexPath:indexPath]];
     }
 }
 
