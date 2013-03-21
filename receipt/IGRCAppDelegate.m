@@ -228,7 +228,7 @@ static NSString *const METADATA_FILE_NAME = @"db.sqlite";
     
     sleep(3);
     
-    _fullVersion = YES;
+    _fullVersion = NO;
     _link = [[NSString alloc] initWithString:@"http://www.google.ru"];
     
     //[self prepareDatabase];
